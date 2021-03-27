@@ -13,6 +13,17 @@
 		6E280CA6260FF91100FD1E69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E280CA5260FF91100FD1E69 /* Preview Assets.xcassets */; };
 		6E280CA8260FF91100FD1E69 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CA7260FF91100FD1E69 /* Persistence.swift */; };
 		6E280CAB260FF91100FD1E69 /* StuddyBud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CA9260FF91100FD1E69 /* StuddyBud.xcdatamodeld */; };
+		6E280CB7260FFAE600FD1E69 /* NetworkStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CB6260FFAE600FD1E69 /* NetworkStructs.swift */; };
+		6E280CBA260FFAF600FD1E69 /* NetConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CB9260FFAF600FD1E69 /* NetConfig.swift */; };
+		6E280CBD260FFAFF00FD1E69 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CBC260FFAFF00FD1E69 /* MainModel.swift */; };
+		6E280CC0260FFB1500FD1E69 /* JobTransmitterAndReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CBF260FFB1500FD1E69 /* JobTransmitterAndReceiver.swift */; };
+		6E280CC3260FFB2200FD1E69 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CC2260FFB2200FD1E69 /* MainViewModel.swift */; };
+		6E280CC6260FFB3600FD1E69 /* FRQChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CC5260FFB3600FD1E69 /* FRQChecker.swift */; };
+		6E280CC9260FFB4700FD1E69 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CC8260FFB4700FD1E69 /* QuizViewModel.swift */; };
+		6E280CCC260FFB5C00FD1E69 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CCB260FFB5C00FD1E69 /* QuestionView.swift */; };
+		6E280CCF260FFB6B00FD1E69 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CCE260FFB6B00FD1E69 /* AnswerView.swift */; };
+		6E280CD2260FFB7700FD1E69 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CD1260FFB7700FD1E69 /* SummaryView.swift */; };
+		6E280CD5260FFB8700FD1E69 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CD4260FFB8700FD1E69 /* OrderedSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		6E280CA7260FF91100FD1E69 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6E280CAA260FF91100FD1E69 /* StuddyBud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StuddyBud.xcdatamodel; sourceTree = "<group>"; };
 		6E280CAC260FF91100FD1E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E280CB6260FFAE600FD1E69 /* NetworkStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStructs.swift; sourceTree = "<group>"; };
+		6E280CB9260FFAF600FD1E69 /* NetConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetConfig.swift; sourceTree = "<group>"; };
+		6E280CBC260FFAFF00FD1E69 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		6E280CBF260FFB1500FD1E69 /* JobTransmitterAndReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTransmitterAndReceiver.swift; sourceTree = "<group>"; };
+		6E280CC2260FFB2200FD1E69 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6E280CC5260FFB3600FD1E69 /* FRQChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRQChecker.swift; sourceTree = "<group>"; };
+		6E280CC8260FFB4700FD1E69 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		6E280CCB260FFB5C00FD1E69 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		6E280CCE260FFB6B00FD1E69 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		6E280CD1260FFB7700FD1E69 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		6E280CD4260FFB8700FD1E69 /* OrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,9 @@
 		6E280C9D260FF90F00FD1E69 /* StuddyBud */ = {
 			isa = PBXGroup;
 			children = (
+				6E280CB5260FFAC400FD1E69 /* Model */,
+				6E280CB4260FFABB00FD1E69 /* ViewModel */,
+				6E280CB3260FFAA200FD1E69 /* QuizComponents */,
 				6E280C9E260FF90F00FD1E69 /* StuddyBudApp.swift */,
 				6E280CA0260FF90F00FD1E69 /* ContentView.swift */,
 				6E280CA2260FF91100FD1E69 /* Assets.xcassets */,
@@ -73,6 +98,38 @@
 				6E280CA5260FF91100FD1E69 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6E280CB3260FFAA200FD1E69 /* QuizComponents */ = {
+			isa = PBXGroup;
+			children = (
+				6E280CCB260FFB5C00FD1E69 /* QuestionView.swift */,
+				6E280CCE260FFB6B00FD1E69 /* AnswerView.swift */,
+				6E280CD1260FFB7700FD1E69 /* SummaryView.swift */,
+				6E280CD4260FFB8700FD1E69 /* OrderedSet.swift */,
+			);
+			path = QuizComponents;
+			sourceTree = "<group>";
+		};
+		6E280CB4260FFABB00FD1E69 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6E280CBF260FFB1500FD1E69 /* JobTransmitterAndReceiver.swift */,
+				6E280CC2260FFB2200FD1E69 /* MainViewModel.swift */,
+				6E280CC5260FFB3600FD1E69 /* FRQChecker.swift */,
+				6E280CC8260FFB4700FD1E69 /* QuizViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6E280CB5260FFAC400FD1E69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E280CB6260FFAE600FD1E69 /* NetworkStructs.swift */,
+				6E280CB9260FFAF600FD1E69 /* NetConfig.swift */,
+				6E280CBC260FFAFF00FD1E69 /* MainModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +201,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E280CB7260FFAE600FD1E69 /* NetworkStructs.swift in Sources */,
+				6E280CD2260FFB7700FD1E69 /* SummaryView.swift in Sources */,
+				6E280CBA260FFAF600FD1E69 /* NetConfig.swift in Sources */,
+				6E280CCF260FFB6B00FD1E69 /* AnswerView.swift in Sources */,
+				6E280CC0260FFB1500FD1E69 /* JobTransmitterAndReceiver.swift in Sources */,
 				6E280CA8260FF91100FD1E69 /* Persistence.swift in Sources */,
+				6E280CCC260FFB5C00FD1E69 /* QuestionView.swift in Sources */,
+				6E280CBD260FFAFF00FD1E69 /* MainModel.swift in Sources */,
 				6E280CA1260FF90F00FD1E69 /* ContentView.swift in Sources */,
+				6E280CD5260FFB8700FD1E69 /* OrderedSet.swift in Sources */,
+				6E280CC9260FFB4700FD1E69 /* QuizViewModel.swift in Sources */,
 				6E280CAB260FF91100FD1E69 /* StuddyBud.xcdatamodeld in Sources */,
 				6E280C9F260FF90F00FD1E69 /* StuddyBudApp.swift in Sources */,
+				6E280CC3260FFB2200FD1E69 /* MainViewModel.swift in Sources */,
+				6E280CC6260FFB3600FD1E69 /* FRQChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
