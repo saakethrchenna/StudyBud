@@ -22,15 +22,21 @@ struct MainView: View {
     
     @State var activeSheet: MainViewActiveSheet?
     
+    var categories = ["All Sets", "Favorites", "History", "Science", "Popular"]
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         TabView{
             
-            
             NavigationView{
                 VStack{
                     ScrollView{
+                        HStack{
+                            Text("Pick a set to practice").font(.title).fontWeight(.light)
+                            Spacer()
+                        }.padding()
+                        
                         ForEach(0..<questionSetModel.questionSets.count, id: \.self) { index in
                             if index % 2==0{
                                 SetCard(questionSet: questionSetModel.questionSets[index], backgroundColor: Color("blue"), foregroundColor: Color("mediumBlue")).padding(.bottom, -15)
@@ -46,9 +52,9 @@ struct MainView: View {
                             activeSheet = .newSet
                         }, label: {
                             HStack{
-                                Text("Add New Set").padding(20).foregroundColor(Color("pink")).font(.headline)
-                                Image(systemName: "plus")
-                            }.frame(maxWidth: 400).background(Color("lightBlue")).cornerRadius(25).overlay(RoundedRectangle(cornerRadius: 25.0).stroke(Color("pink"),lineWidth: 2)).padding()
+                                Text("Add New Set").padding(20).font(.headline)
+                                Image(systemName: "plus").font(.headline)
+                            }.padding(.horizontal).background(Color(.white)).cornerRadius(25).overlay(RoundedRectangle(cornerRadius: 25.0).stroke(Color("pink"),lineWidth: 2)).padding().foregroundColor(Color("pink"))
                         })
                     }
                         
