@@ -31,17 +31,18 @@ class QuizViewModel : ObservableObject {
     var numCorrect: Int {
         var count = 0
         for (_, state) in questionsHistory {
-            if state == .INCORRECT {
+            if state == .CORRECT {
                 count += 1
             }
         }
+        print(count)
         return count
     }
     
     var numIncorrect: Int {
         var count = 0
         for (_, state) in questionsHistory {
-            if state == .CORRECT {
+            if state == .INCORRECT {
                 count += 1
             }
         }

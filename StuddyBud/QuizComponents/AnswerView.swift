@@ -107,11 +107,13 @@ struct AnswerView: View {
     
     func correctAnswer() {
         correct = true
+        frqChecker.state = .CORRECT
         quizViewModel.updateQuestionState(question, state: .CORRECT)
     }
     
     func incorrectAnswer() {
         correct = false
+        frqChecker.state = .INCORRECT
         quizViewModel.updateQuestionState(question, state: .INCORRECT)
     }
 }

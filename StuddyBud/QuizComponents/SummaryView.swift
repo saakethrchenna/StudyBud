@@ -13,7 +13,7 @@ struct SummaryView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                Text(String(format: "%.0f%% Correct", Float(quizViewModel.numCorrect)/Float(max(quizViewModel.questionSet.questions.count,1)))).font(.largeTitle).fontWeight(.heavy)
+                Text(String(format: "%.0f%% Correct", 100*Float(quizViewModel.numCorrect)/Float(max(quizViewModel.questionSet.questions.count,1)))).font(.largeTitle).fontWeight(.heavy)
                 VStack {
                     Text("Incorrect or Unanswered Questions").font(.headline).fontWeight(.light)
 //                    ForEach(quizViewModel.questionsHistory, id: \.0.id) { (question, state) in
@@ -21,6 +21,11 @@ struct SummaryView: View {
 //                            questionCard(question: history.question, showAnswer: true).padding()
 //                        }
 //                    }
+                    ForEach(quizViewModel.questionSet.questions, id: \.id) { question in
+                        if quizViewModel.questionsHistory[question] == .INCORRECT || quizViewModel.questionsHistory[question] == .UNANSWERED {
+                            questionCard(question: question, showAnswer: true).padding()
+                        }
+                    }
                 }
             }.padding()
         }

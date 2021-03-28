@@ -35,7 +35,7 @@ class JobTransmitterAndReceiver: ObservableObject {
     func previewData() {
         questionSets = [
             QuestionSet(
-                webpage_name: "Demo One",
+                webpage_name: "Demo One Hello Testing",
                 webpage_url: "https://youtube.com",
                 relevant_webpages: [
                     RelevantWebpage(name: "Apple", url: "https://apple.com"),
@@ -74,18 +74,18 @@ class JobTransmitterAndReceiver: ObservableObject {
                         question_type: .BOOL,
                         correct_answer: "42",
                         relevant_text: "Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity.",
-                        possible_answers: ["40", "41", "43"]),
+                        possible_answers: ["40", "41", "43", "42"]),
                     Question(
                         question_text: "What is the meaning of life in today's increasingly divided society?",
                         question_type: .MCQ,
                         correct_answer: "42",
                         relevant_text: "Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity.",
-                        possible_answers: ["40", "41", "43"]),
+                        possible_answers: ["40", "41", "43", "42"]),
                     Question(
-                        question_text: "What is the meaning of life in today's increasingly divided society?",
+                        question_text: "What is the meaning of life in today's increasingly divided society? There are some more details we should check because the formatting is hard coded and never tested on large inputs.",
                         question_type: .FRQ,
-                        correct_answer: "42",
-                        relevant_text: "Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity.",
+                        correct_answer: "42 Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity. We are testing large inputs because we should do that in order to make sure something hasn't gone wrong with the formatting.",
+                        relevant_text: "Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity. We are testing large inputs because we should do that in order to make sure something hasn't gone wrong with the formatting. Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity. We are testing large inputs because we should do that in order to make sure something hasn't gone wrong with the formatting.",
                         possible_answers: []),
                 ]),
 
