@@ -22,6 +22,9 @@ struct SetCard: View {
             }
             RoundedRectangle(cornerRadius: 35).fill(backgroundColor).frame(height: 225).padding(.horizontal)
             Circle().fill(Color("yellow")).frame(height: 20).padding(.top, -95).padding(.leading, -250)
+            Raindrop().fill(Color("yellow")).frame(width: 75, height: 75).rotationEffect(.degrees(-160)).padding(.top, -65).padding(.leading, 225)
+            Triangle().fill(Color("yellow")).frame(width: 25, height: 30).rotationEffect(.degrees(21)).padding(.top, 20).padding(.leading, -75)
+            RoundedRectangle(cornerRadius: 25.0).fill(Color("yellow")).frame(width: 40, height: 20).padding(.top, 250).padding(.leading, 185).rotationEffect(.degrees(-20))
             VStack(alignment:.leading){
             HStack{
                 Text(questionSet.webpage_name).font(.title).fontWeight(.medium).foregroundColor(.white).lineLimit(1)
@@ -64,6 +67,27 @@ struct SetCard: View {
         }
             
         }.padding().padding(.vertical, -60)
+    }
+}
+
+struct Raindrop: Shape {
+    func  path(in rect: CGRect) -> Path {
+        Path { path in
+            path.move(to: CGPoint(x: rect.size.width/2, y: 0))
+            path.addQuadCurve(to: CGPoint(x: rect.size.width/2, y: rect.size.height), control: CGPoint(x:rect.size.width, y: rect.size.height))
+            path.addQuadCurve(to: CGPoint(x: rect.size.width/2, y: 0), control: CGPoint(x:0, y: rect.size.height))
+        }
+    }
+}
+
+struct Triangle: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            path.move(to: CGPoint(x: rect.midX, y: rect.minY))
+            path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+            path.addLine(to: CGPoint(x: rect.midX, y: rect.minY))
+        }
     }
 }
 

@@ -21,6 +21,7 @@ struct MainView: View {
     @AppStorage("client_id") var client_id = ""
     
     @State var activeSheet: MainViewActiveSheet?
+    @State var selected = 0
     
     var categories = ["All Sets", "Favorites", "History", "Science", "Popular"]
     
@@ -32,10 +33,6 @@ struct MainView: View {
             NavigationView{
                 VStack{
                     ScrollView{
-                        HStack{
-                            Text("Pick a set to practice").font(.title).fontWeight(.light)
-                            Spacer()
-                        }.padding()
                         
                         ForEach(0..<questionSetModel.questionSets.count, id: \.self) { index in
                             if index % 2==0{
@@ -65,7 +62,7 @@ struct MainView: View {
                         label: {
                             EmptyView()
                         })
-                }.navigationBarTitle("Question Sets")
+                }.navigationBarTitle("Question Sets").navigationBarItems(trailing: Image("biden").resizable(resizingMode: /*@START_MENU_TOKEN@*/.stretch/*@END_MENU_TOKEN@*/).frame(width: 40, height: 40).clipShape(Circle()).overlay(Circle().stroke(Color("blue"),lineWidth: 2)))
             }.sheet(item: $activeSheet, onDismiss: { self.first_time = false }){ item in
                 switch item {
                 case .onboarding:
