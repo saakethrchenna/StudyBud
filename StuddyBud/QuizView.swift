@@ -69,7 +69,7 @@ struct QuizView: View {
                     })
                 }
             }.navigationTitle("Question:")
-        }.sheet(isPresented: $showSummary, content: {
+        }.padding(.bottom, 60).sheet(isPresented: $showSummary, content: {
             SummaryView()
         })
     }

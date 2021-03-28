@@ -29,18 +29,17 @@ struct QuestionView: View {
                 AnswerView(question: question).padding(.top)
                 
             }.font(.title2).padding().foregroundColor(.black)
-            }.background(Color("lightBlue")).ignoresSafeArea()
+            }.background(Color("lightBlue"))
             
-            Button(action: {
-                withAnimation{
-                    show_relevant_text.toggle()
-                }
-            }, label: {
-                HStack{
-                    Text(show_relevant_text ? "Hide Relevant Text" : "Show Relevant Text")
-                }.padding(20).foregroundColor(Color("blue")).font(.headline).frame(maxWidth: 400).background(Color("lightBlue")).cornerRadius(25).padding()
-            })
-        }.navigationTitle("Question:")
+        }.navigationTitle("Question:").navigationBarItems(trailing: Button(action: {
+            withAnimation{
+                show_relevant_text.toggle()
+            }
+        }, label: {
+            HStack{
+                Text(show_relevant_text ? "Hide Relevant Text" : "Show Relevant Text")
+            }.padding(10).foregroundColor(Color("blue")).font(.headline).background(Color("lightBlue")).cornerRadius(10)
+        }))
         }
     }
 }

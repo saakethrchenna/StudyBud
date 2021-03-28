@@ -15,8 +15,14 @@ struct SetDetailPage: View {
     
     var body: some View {
         VStack(alignment: .leading){
-           
-                Text("Other Relevant Webpages:").font(.title2).fontWeight(.bold).foregroundColor(.gray)
+            TabView{
+                ForEach(questionSet.questions, id: \.id){ question in
+                    questionCard(question: question).padding()
+                }
+            }.tabViewStyle(PageTabViewStyle())
+            
+            VStack(alignment: .leading){
+                Text("Other Relevant Webpages:").font(.title2).fontWeight(.bold).foregroundColor(.black)
                
                     ForEach(questionSet.relevant_webpages, id: \.id){ site in
                         Button(action: {
@@ -26,19 +32,7 @@ struct SetDetailPage: View {
                             Text(site.name).font(.title3).fontWeight(.light).foregroundColor(Color("pink")).underline().lineLimit(1)
                         }
                     }
-            
-            
-            HStack{
-                Text("All Questions:").font(.title2).fontWeight(.bold).foregroundColor(.gray)
-                Spacer()
-            }.padding(.top)
-            Divider()
-            
-            TabView{
-                ForEach(questionSet.questions, id: \.id){ question in
-                    questionCard(question: question).padding()
-                }
-            }.tabViewStyle(PageTabViewStyle())
+            }.padding(.bottom)
             
             HStack{
                 Button(action: {
@@ -46,9 +40,9 @@ struct SetDetailPage: View {
                 }, label: {
                     HStack{
                         Image(systemName: "square.and.arrow.up").font(.title2)
-                    }.padding().foregroundColor(.white).font(.headline).background(Color("pink")).cornerRadius(15)
+                    }.padding().foregroundColor(.white).font(.headline).background(Color("pink")).cornerRadius(20)
                 })
-                
+                Spacer()
                 NavigationLink(
                     destination: QuizView(questionSet: questionSet).environmentObject(QuizViewModel(questionSet: questionSet)).navigationTitle("Questions"),
                     label: {
@@ -57,7 +51,7 @@ struct SetDetailPage: View {
                             Image(systemName: "chevron.right").font(.title)
                             Image(systemName: "chevron.right").font(.title).padding(.leading, -20)
                             Image(systemName: "chevron.right").font(.title).padding(.leading, -20)
-                        }.padding().foregroundColor(.white).font(.headline).background(Color( "blue")).cornerRadius(15)
+                        }.padding().padding(.horizontal).foregroundColor(.white).font(.headline).background(Color( "blue")).cornerRadius(25)
                     })
             }
             
@@ -69,7 +63,7 @@ struct SetDetailPage: View {
                 ShareSheetView(activityItems: [questionSet.webpage_url])
             }
         }
-        .navigationTitle(questionSet.webpage_name)
+        .navigationTitle(questionSet.webpage_name).padding(.bottom, 50)
     }
 }
 
@@ -79,27 +73,21 @@ struct questionCard: View {
     var body: some View{
         VStack(alignment: .leading){
             HStack{
-                Text("Relevant Text:").font(.headline).fontWeight(.heavy)
-                Spacer()
-            }
-            Text(question.relevant_text).font(.caption).fontWeight(.light)
-            Divider()
-            HStack{
                 Text("Question:").font(.headline).fontWeight(.heavy)
                 Spacer()
             }
             Text(question.question_text).fontWeight(.light)
             Divider()
             HStack{
-                Text("Correct Answer:").font(.headline).fontWeight(.heavy)
+                Text("Correct Answer:").font(.headline).fontWeight(.heavy).lineLimit(3)
                 Spacer()
             }
             VStack(alignment: .leading){
                 if !showAnswer{
-                    Text(question.correct_answer).fontWeight(.light).blur(radius: 2.5)
+                    Text(question.correct_answer).fontWeight(.light).blur(radius: 4).lineLimit(2)
                 }
                 else {
-                    Text(question.correct_answer).fontWeight(.light)
+                    Text(question.correct_answer).fontWeight(.light).lineLimit(2)
                 }
                 
                 if question.question_type == .FRQ {
@@ -110,6 +98,13 @@ struct questionCard: View {
                     showAnswer.toggle()
                 }
             }
+            Divider()
+            HStack{
+                Text("Relevant Text:").font(.headline).fontWeight(.heavy).lineLimit(4)
+                Spacer()
+            }
+            Text(question.relevant_text).font(.caption).fontWeight(.light)
+
         }.padding().frame(maxHeight:400).background(Color("lightBlue")).cornerRadius(10.0)
     }
 }
