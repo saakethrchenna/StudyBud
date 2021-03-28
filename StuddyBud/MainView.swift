@@ -28,8 +28,9 @@ struct MainView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
-        TabView{
-            
+        ZStack(alignment: .bottom){
+        VStack{
+            if self.selected == 0 {
             NavigationView{
                 VStack{
                     ScrollView{
@@ -51,18 +52,18 @@ struct MainView: View {
                             HStack{
                                 Text("Add New Set").padding(20).font(.headline)
                                 Image(systemName: "plus").font(.headline)
-                            }.padding(.horizontal).background(Color(.white)).cornerRadius(25).overlay(RoundedRectangle(cornerRadius: 25.0).stroke(Color("pink"),lineWidth: 2)).padding().foregroundColor(Color("pink"))
+                            }.padding(.horizontal).background(Color(.white)).cornerRadius(25).overlay(RoundedRectangle(cornerRadius: 25.0).stroke(Color("pink"),lineWidth: 2)).padding().foregroundColor(Color("pink")).padding(.bottom, 100)
                         })
                     }
                         
-                    }
+                    }.edgesIgnoringSafeArea(.bottom)
                     
                     NavigationLink(
                         destination: SetDetailPage(questionSet: viewModel.selectedSet), isActive: $viewModel.showingSetDetailsView,
                         label: {
                             EmptyView()
                         })
-                }.navigationBarTitle("Question Sets").navigationBarItems(trailing: Image("biden").resizable(resizingMode: /*@START_MENU_TOKEN@*/.stretch/*@END_MENU_TOKEN@*/).frame(width: 40, height: 40).clipShape(Circle()).overlay(Circle().stroke(Color("blue"),lineWidth: 2)))
+                }.navigationBarTitle("Question Sets").navigationBarItems(trailing: Image("biden").resizable(resizingMode: /*@START_MENU_TOKEN@*/.stretch/*@END_MENU_TOKEN@*/).frame(width: 40, height: 40).clipShape(RoundedRectangle(cornerRadius: 10)).overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("blue"),lineWidth: 2)))
             }.sheet(item: $activeSheet, onDismiss: { self.first_time = false }){ item in
                 switch item {
                 case .onboarding:
@@ -86,8 +87,13 @@ struct MainView: View {
                 questionSetModel.PING_SERVER_OutboundF()
                 print("ping")
             }.tabItem { Label("Home", systemImage: "house.fill") }
-            BrowseView().tabItem { Label("Browse", systemImage: "bag.badge.plus") }
+            }
+            else if self.selected == 1{
+                BrowseView().tabItem { Label("Browse", systemImage: "bag.badge.plus") }
+            }
         }
+            FloatingTabBar(selected: self.$selected).shadow(radius: 10).padding(.bottom, -30)
+        }.edgesIgnoringSafeArea(.bottom)
     }
 }
 
