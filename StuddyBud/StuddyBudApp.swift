@@ -13,7 +13,7 @@ struct StuddyBudApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainView().environmentObject(MainViewModel()).environmentObject(JobTransmitterAndReceiver(preview: true))
+            MainView().environmentObject(MainViewModel()).environmentObject(JobTransmitterAndReceiver())
         }
     }
 }

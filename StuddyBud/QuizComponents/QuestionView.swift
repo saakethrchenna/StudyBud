@@ -52,7 +52,7 @@ struct QuestionView_Previews: PreviewProvider {
                 question_type: .MCQ,
                 correct_answer: "42",
                 relevant_text: "Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity.",
-                possible_answers: ["40", "41", "43"])
+                possible_answers: ["40", "41", "43", "42"])
         )
     }
 }
