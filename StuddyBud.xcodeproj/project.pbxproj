@@ -24,6 +24,16 @@
 		6E280CCF260FFB6B00FD1E69 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CCE260FFB6B00FD1E69 /* AnswerView.swift */; };
 		6E280CD2260FFB7700FD1E69 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CD1260FFB7700FD1E69 /* SummaryView.swift */; };
 		6E280CD5260FFB8700FD1E69 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CD4260FFB8700FD1E69 /* OrderedSet.swift */; };
+		6E280CD8260FFDBF00FD1E69 /* SetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CD7260FFDBF00FD1E69 /* SetCard.swift */; };
+		6E280CDB260FFDE100FD1E69 /* SetDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CDA260FFDE100FD1E69 /* SetDetailPage.swift */; };
+		6E280CDE260FFE3300FD1E69 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CDD260FFE3300FD1E69 /* OnboardingView.swift */; };
+		6E280CE1260FFEB200FD1E69 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CE0260FFEB200FD1E69 /* MainView.swift */; };
+		6E280CE4260FFEDB00FD1E69 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CE3260FFEDB00FD1E69 /* ShareSheetView.swift */; };
+		6E280CE7260FFEFC00FD1E69 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CE6260FFEFC00FD1E69 /* QuizView.swift */; };
+		6E280CEA260FFF9000FD1E69 /* NewSetSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CE9260FFF9000FD1E69 /* NewSetSheet.swift */; };
+		6E280CED260FFFB800FD1E69 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CEC260FFFB800FD1E69 /* SafariView.swift */; };
+		6E280CF0260FFFEB00FD1E69 /* NavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CEF260FFFEB00FD1E69 /* NavigationBarColor.swift */; };
+		6E280CF3261002BE00FD1E69 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E280CF2261002BE00FD1E69 /* BrowseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +56,16 @@
 		6E280CCE260FFB6B00FD1E69 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		6E280CD1260FFB7700FD1E69 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		6E280CD4260FFB8700FD1E69 /* OrderedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
+		6E280CD7260FFDBF00FD1E69 /* SetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCard.swift; sourceTree = "<group>"; };
+		6E280CDA260FFDE100FD1E69 /* SetDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailPage.swift; sourceTree = "<group>"; };
+		6E280CDD260FFE3300FD1E69 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6E280CE0260FFEB200FD1E69 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6E280CE3260FFEDB00FD1E69 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
+		6E280CE6260FFEFC00FD1E69 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		6E280CE9260FFF9000FD1E69 /* NewSetSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSetSheet.swift; sourceTree = "<group>"; };
+		6E280CEC260FFFB800FD1E69 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		6E280CEF260FFFEB00FD1E69 /* NavigationBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarColor.swift; sourceTree = "<group>"; };
+		6E280CF2261002BE00FD1E69 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +108,16 @@
 				6E280CAC260FF91100FD1E69 /* Info.plist */,
 				6E280CA9260FF91100FD1E69 /* StuddyBud.xcdatamodeld */,
 				6E280CA4260FF91100FD1E69 /* Preview Content */,
+				6E280CD7260FFDBF00FD1E69 /* SetCard.swift */,
+				6E280CDA260FFDE100FD1E69 /* SetDetailPage.swift */,
+				6E280CDD260FFE3300FD1E69 /* OnboardingView.swift */,
+				6E280CE0260FFEB200FD1E69 /* MainView.swift */,
+				6E280CE3260FFEDB00FD1E69 /* ShareSheetView.swift */,
+				6E280CE6260FFEFC00FD1E69 /* QuizView.swift */,
+				6E280CE9260FFF9000FD1E69 /* NewSetSheet.swift */,
+				6E280CEC260FFFB800FD1E69 /* SafariView.swift */,
+				6E280CEF260FFFEB00FD1E69 /* NavigationBarColor.swift */,
+				6E280CF2261002BE00FD1E69 /* BrowseView.swift */,
 			);
 			path = StuddyBud;
 			sourceTree = "<group>";
@@ -202,19 +232,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E280CB7260FFAE600FD1E69 /* NetworkStructs.swift in Sources */,
+				6E280CEA260FFF9000FD1E69 /* NewSetSheet.swift in Sources */,
 				6E280CD2260FFB7700FD1E69 /* SummaryView.swift in Sources */,
+				6E280CE4260FFEDB00FD1E69 /* ShareSheetView.swift in Sources */,
 				6E280CBA260FFAF600FD1E69 /* NetConfig.swift in Sources */,
+				6E280CDE260FFE3300FD1E69 /* OnboardingView.swift in Sources */,
 				6E280CCF260FFB6B00FD1E69 /* AnswerView.swift in Sources */,
+				6E280CF0260FFFEB00FD1E69 /* NavigationBarColor.swift in Sources */,
+				6E280CE1260FFEB200FD1E69 /* MainView.swift in Sources */,
 				6E280CC0260FFB1500FD1E69 /* JobTransmitterAndReceiver.swift in Sources */,
 				6E280CA8260FF91100FD1E69 /* Persistence.swift in Sources */,
 				6E280CCC260FFB5C00FD1E69 /* QuestionView.swift in Sources */,
+				6E280CF3261002BE00FD1E69 /* BrowseView.swift in Sources */,
 				6E280CBD260FFAFF00FD1E69 /* MainModel.swift in Sources */,
+				6E280CE7260FFEFC00FD1E69 /* QuizView.swift in Sources */,
+				6E280CED260FFFB800FD1E69 /* SafariView.swift in Sources */,
 				6E280CA1260FF90F00FD1E69 /* ContentView.swift in Sources */,
 				6E280CD5260FFB8700FD1E69 /* OrderedSet.swift in Sources */,
 				6E280CC9260FFB4700FD1E69 /* QuizViewModel.swift in Sources */,
 				6E280CAB260FF91100FD1E69 /* StuddyBud.xcdatamodeld in Sources */,
 				6E280C9F260FF90F00FD1E69 /* StuddyBudApp.swift in Sources */,
+				6E280CDB260FFDE100FD1E69 /* SetDetailPage.swift in Sources */,
 				6E280CC3260FFB2200FD1E69 /* MainViewModel.swift in Sources */,
+				6E280CD8260FFDBF00FD1E69 /* SetCard.swift in Sources */,
 				6E280CC6260FFB3600FD1E69 /* FRQChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

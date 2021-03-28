@@ -4,6 +4,7 @@
 //
 //  Created by user175571 on 3/27/21.
 //
+import SwiftUI
 
 struct AnswerView: View {
     
@@ -18,7 +19,6 @@ struct AnswerView: View {
     @ObservedObject var frqChecker = FRQChecker()
     @State var typedAnswer = ""
     
-    @State var questionStatus: QuestionState = .UNANSWERED
     @State var correct: Bool?
     @State var selectedAnswer: String?
     
@@ -50,11 +50,11 @@ struct AnswerView: View {
                 VStack(alignment:.leading) {
                     Text("Type your answer here:").font(.headline).foregroundColor(Color("blue"))
                     
-                    TextEditor(text: $typedAnswer).frame(minHeight: 150).background(Color("lightBlue")).cornerRadius(15.0).overlay(RoundedRectangle(cornerRadius: 15.0).stroke(Color("pink"),lineWidth: 1)).font(.callout)
-                    Button(action: { self.frqChecker.check_frq_answer(input: typedAnswer, target: question.correct_answer) }, label: {
+                    TextField("Answer here...", text: $typedAnswer).frame(minHeight: 150).background(Color("lightBlue")).cornerRadius(15.0).overlay(RoundedRectangle(cornerRadius: 15.0).stroke(Color("pink"),lineWidth: 1)).font(.callout)
+                    Button(action: { self.frqChecker.check_frq_answer(input: typedAnswer, target: question.correct_answer)}, label: {
                         HStack{
                             Spacer()
-                            Text("Check").foregroundColor(Color("pink")).padding(.vertical, 10).padding(.horizontal, 100).background(Color("yellow").cornerRadius(15.0))
+                            Text("Check").foregroundColor(Color("pink")).padding(.vertical, 10).padding(.horizontal, 100).background((frqChecker.state == .CORRECT ? Color("green") : Color("yellow")).cornerRadius(15.0))
                             Spacer()
                         }.padding(.vertical)
                     })
@@ -76,14 +76,14 @@ struct AnswerView: View {
                                     }
                                 }
                             }, label: {
-                                if (questionStatus == .CORRECT && choice == question.correct_answer){
+                                if (self.frqChecker.state == .CORRECT && choice == question.correct_answer){
                                     HStack{
                                         Spacer()
                                         Text(choice).foregroundColor(Color(.white)).padding(.vertical, 15).frame(width: 275).padding(.horizontal, 15).background(Color(.green)).cornerRadius(15.0)
                                         Spacer()
                                     }.padding(.vertical, 5)
                                 }
-                                else if (questionStatus == .INCORRECT && choice == selectedAnswer){
+                                else if (self.frqChecker.state == .INCORRECT && choice == selectedAnswer){
                                     HStack{
                                         Spacer()
                                         Text(choice).foregroundColor(Color(.white)).padding(.vertical, 15).frame(width: 275).padding(.horizontal, 15).background(Color("pink")).cornerRadius(15.0)
@@ -107,14 +107,12 @@ struct AnswerView: View {
     
     func correctAnswer() {
         correct = true
-        questionStatus = .CORRECT
-        quizViewModel.questionsHistory.update(with: QuestionHistory(question: question, questionState: .CORRECT))
+        quizViewModel.updateQuestionState(question, state: .CORRECT)
     }
     
     func incorrectAnswer() {
         correct = false
-        questionStatus = .INCORRECT
-        quizViewModel.questionsHistory.update(with: QuestionHistory(question: question, questionState: .INCORRECT))
+        quizViewModel.updateQuestionState(question, state: .INCORRECT)
     }
 }
 
@@ -123,7 +121,7 @@ struct AnswerView_Previews: PreviewProvider {
         AnswerView(
             question: Question(
                 question_text: "What is the meaning of life in today's increasingly divided society?",
-                question_type: .MCQ,
+                question_type: .FRQ,
                 correct_answer: "42",
                 relevant_text: "Mr. Tubbs is a very cool and interesting individual who needs to be loved and cherished by those who feel his generosity.",
                 possible_answers: ["40", "41", "43", "42"])

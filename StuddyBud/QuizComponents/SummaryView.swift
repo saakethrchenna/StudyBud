@@ -16,11 +16,11 @@ struct SummaryView: View {
                 Text(String(format: "%.0f%% Correct", Float(quizViewModel.numCorrect)/Float(max(quizViewModel.questionSet.questions.count,1)))).font(.largeTitle).fontWeight(.heavy)
                 VStack {
                     Text("Incorrect or Unanswered Questions").font(.headline).fontWeight(.light)
-                    ForEach(quizViewModel.questionsHistory, id: \.id) { history in
-                        if history.questionState == .INCORRECT || history.questionState == .UNANSWERED {
-                            questionCard(question: history.question, showAnswer: true).padding()
-                        }
-                    }
+//                    ForEach(quizViewModel.questionsHistory, id: \.0.id) { (question, state) in
+//                        if history.questionState == .INCORRECT || history.questionState == .UNANSWERED {
+//                            questionCard(question: history.question, showAnswer: true).padding()
+//                        }
+//                    }
                 }
             }.padding()
         }
@@ -57,3 +57,4 @@ struct SummaryView_Previews: PreviewProvider {
                                                                                ])))
     }
 }
+
