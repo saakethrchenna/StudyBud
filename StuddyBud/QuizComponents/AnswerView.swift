@@ -54,7 +54,7 @@ struct AnswerView: View {
                     Button(action: { self.frqChecker.check_frq_answer(input: typedAnswer, target: question.correct_answer)}, label: {
                         HStack{
                             Spacer()
-                            Text("Check").foregroundColor(Color("pink")).padding(.vertical, 10).padding(.horizontal, 100).background((frqChecker.state == .CORRECT ? Color("green") : Color("yellow")).cornerRadius(15.0))
+                            Text("Check").foregroundColor(Color("pink")).padding(.vertical, 10).padding(.horizontal, 100).background((frqChecker.state == .CORRECT ? Color.green : Color("yellow")).cornerRadius(15.0))
                             Spacer()
                         }.padding(.vertical)
                     })
